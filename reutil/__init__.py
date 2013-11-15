@@ -17,15 +17,15 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
-
-import os
 import codecs
+import os
 import re
-import tempfile
 import shutil
+import tempfile
+
 
 class ReDict(object):
-    """Batchable replacement dictionary.
+    """Batch able replacement dictionary.
 
         >>> rd = ReDict({'a ': 'A ', 'ba': 'Ba'})
         >>> txt = "a lonely banana"
@@ -47,7 +47,10 @@ class ReDict(object):
         return v
 
     def replace_all(self, string, template="{value}"):
-        """
+        """All keys are replaced with their values within the given string.
+
+        A template may be given to replace key values with a formated variant
+        of the value.
 
             >>> rd = ReDict({'lonely': 'alone'})
             >>> txt = "a lonely banana"
