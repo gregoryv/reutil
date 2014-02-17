@@ -99,6 +99,7 @@ pygments_style = 'sphinx'
 
 
 # -- Options for HTML output ----------------------------------------------
+import nostrain
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
@@ -110,7 +111,7 @@ html_theme = 'nostrain'
 #html_theme_options = {}
 
 # Add any paths that contain custom themes here, relative to this directory.
-html_theme_path = ['..']
+html_theme_path = [nostrain.sphinx_theme_path()]
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
