@@ -38,3 +38,7 @@ nosetests.xml
 reutil/test.txt
 
 test.txt
+
+reutil.sublime-workspace
+
+reutil.sublime-project

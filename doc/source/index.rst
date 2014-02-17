@@ -1,7 +1,7 @@
-reutil's documentation!
-=======================
+reutil
+======
 
-Module for batched multiple text replacements.
+*Module for batched multiple text replacements.*
 
 The purpose of this module is to make it easier for developers
 to do multiple replacements in text and files with basic python
