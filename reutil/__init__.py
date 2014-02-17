@@ -28,6 +28,7 @@ class ReDict(object):
     """Replacement dictionary where matched keys are replaced with
     their value.
 
+        >>> from reutil import ReDict
         >>> rd = ReDict({'a ': 'A ', 'ba': 'Ba'})
         >>> txt = "a lonely banana"
         >>> print rd.replace_all(txt)
@@ -55,6 +56,7 @@ class ReDict(object):
         A template may be given to replace key values with a
         formated variant of the value.
 
+            >>> from reutil import ReDict
             >>> rd = ReDict({'lonely': 'alone'})
             >>> txt = "a lonely banana"
             >>> print rd.replace_all(txt, "{key} -> {value}")
