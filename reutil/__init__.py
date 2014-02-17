@@ -1,21 +1,21 @@
 # -*- coding: utf-8 -*-
-""" Library for batched multiple text replacements
+"""Module for batched multiple text replacements
 
-    Library for batched multiple text replacements
-    Copyright (C) 2013  Gregory Vincic
+Copyright (C) 2013  Gregory Vincic
 
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
+This program is free software: you can redistribute it and/or
+modify it under the terms of the GNU General Public License as
+published by the Free Software Foundation, either version 3 of the
+License, or (at your option) any later version.
 
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
 """
 import codecs
 import os
@@ -25,7 +25,8 @@ import tempfile
 
 
 class ReDict(object):
-    """Batch able replacement dictionary.
+    """Replacement dictionary where matched keys are replaced with
+    their value.
 
         >>> rd = ReDict({'a ': 'A ', 'ba': 'Ba'})
         >>> txt = "a lonely banana"
@@ -39,7 +40,8 @@ class ReDict(object):
         self.template = "{value}"
 
     def _get(self, k):
-        """Returns the template rendered value or k if it does not exist.
+        """Returns the template rendered value or k if it does not
+        exist.
         """
         v = k.group()
         if v in self.data:
@@ -47,10 +49,11 @@ class ReDict(object):
         return v
 
     def replace_all(self, string, template="{value}"):
-        """All keys are replaced with their values within the given string.
+        """All keys are replaced with their values within the given
+        string.
 
-        A template may be given to replace key values with a formated variant
-        of the value.
+        A template may be given to replace key values with a
+        formated variant of the value.
 
             >>> rd = ReDict({'lonely': 'alone'})
             >>> txt = "a lonely banana"
@@ -91,7 +94,8 @@ def msub(patterns_dict, string, template="{value}"):
     return rd.replace_all(string, template)
 
 def msub_in(patterns_dict, path, template="{value}", encoding="utf-8"):
-    """Same as msub but replaces the given file with the replaced one.
+    """Same as msub but replaces the given file with the replaced
+    one.
 
     Creates temporary files inside the directory of the given path.
 
