@@ -106,3 +106,8 @@ pre {
 div.sphinxsidebar input {
    border: 1px solid #777;
 }
+
+div.sphinxsidebarwrapper h3,
+div.sphinxsidebarwrapper h4 {
+    margin-top: 20px;
+}

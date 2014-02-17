@@ -27,16 +27,11 @@ Example
     I hate beans and darth vader
 
 
-Contents:
+API
+---
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    reutil
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`search`
 
