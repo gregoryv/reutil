@@ -10,5 +10,6 @@ setup(name='reutil',
       license='GPLv3',
       packages=['reutil'],
       include_package_data=True,
-      install_requires=[]
+      install_requires=[],
+      setup_requires=['nostrain']
       )
